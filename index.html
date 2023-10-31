@@ -13,41 +13,44 @@
 
 
     <h2>Formulaire PMI</h2>
+<form id="sb_form"
+  onsubmit="process2(
+    'https://api.sarbacane.com/v1/forms/contacts/upsert?listID&#x3D;9c413ee7-aa1d-4d67-925d-6ea7356e92f4&amp;formID&#x3D;OojoKWh0RMGeqpNeIJaUTQ&amp;timezone&#x3D;Europe/Paris', 'https://forms.sbc36.com/', '61782104b95cee62596eb989', 'false', 'message',
+    '',
+    'https://api.sarbacane.com/v1/transactional/sendmessage/optin', 'Merci', 'Vos informations ont été ajoutées avec succès.',
+    'Vous allez recevoir un email', 'Vous devrez cliquer sur le lien de confirmation pour valider votre inscription', 'Erreur',
+    'Une erreur inattendue s%27est produite.', 'Le formulaire est en cours d%27édition, veuillez patienter quelques minutes avant d%27essayer à nouveau.', '',
+    '', '', '', ''
+  );
+  return false;"
+  method="post">
+  
+  <span style="display: flex;flex-direction: row;">
+    <label id="label-email">Votre email</label>
+    <div id="form-mandatory">*</div>
+  </span>
+  <input 
+         id="input-email"
+         type="email"
+         name="email" required="true"
+         sb-form-input>
+  
+  <span style="display: flex;flex-direction: row;">
+    <label id="label-e89be8e7-2150-4174-b1e1-6ce437d70c2e">Date de naissance</label>
+    <div id="form-mandatory">*</div>
+  </span>
+  <div class="date" style="text-align: start;" name="e89be8e7-2150-4174-b1e1-6ce437d70c2e" format="dd/MM/yyyy"><input id="input-e89be8e7-2150-4174-b1e1-6ce437d70c2e" min="1" max="31" type="number" name="day" placeholder="JJ" size="2" required="true" sb-form-input> / <input id="input-e89be8e7-2150-4174-b1e1-6ce437d70c2e" min="1" max="12" type="number" name="month" placeholder="MM" size="2" required="true" sb-form-input> / <input id="input-e89be8e7-2150-4174-b1e1-6ce437d70c2e" min="1" max="2100" type="number" name="year" placeholder="AAAA" size="4" required="true" sb-form-input>
+  </div><div id="div-submitInput" align="center">
+    <button id="submitInput" type="submit" value="Valider" class="mobile-FW" ><span style="margin:0px;font-size:14px;"><strong><span style="font-size:14px;">Valider</span></strong></span>
+</button>
+    <div class="loader" style="display:none"></div>
+</div>
+  <label id="form-footer-mandatory">* Champs obligatoires</label>
+</form>
 
-    <form id="sb_form" onsubmit="process2(
-      'https://api.sarbacane.com/v1/forms/contacts/upsert?listID&#x3D;2ePNFgwSTpSFkS4bDXPsog&amp;formID&#x3D;weSkvAbMQ_aVEp9fJtY2tg&amp;timezone&#x3D;Europe/Paris', 'https://forms.sbc33.com/', '61782104b95cee62596eb989', 'false', 'message',
-      '',
-      'https://api.sarbacane.com/v1/transactional/sendmessage/optin', 'Merci', 'Vos informations ont été ajoutées avec succès.',
-      'Vous allez recevoir un email', 'Vous devrez cliquer sur le lien de confirmation pour valider votre inscription', 'Erreur',
-      'Une erreur inattendue s%27est produite.', 'Le formulaire est en cours d%27édition, veuillez patienter quelques minutes avant d%27essayer à nouveau.', '',
-      '', '', '', ''
-    );
-    return false;" method="post">
-        <label id="form-header-title"></label>
 
-        <span style="display: flex;flex-direction: row;">
-      <label id="label-email">Email</label>
-      <div id="form-mandatory">*</div>
-    </span>
-        <input id="input-email" type="email" name="email" required="true" sb-form-input>
+<script type="text/javascript" src="https://forms.sbc36.com/form.js"></script>
 
-        <span style="display: flex;flex-direction: row;">
-      <label id="label-1iu4ibeb7pljbxtv0trpof">Date de naissance pr&eacute;vue</label>
-      <div id="form-mandatory">*</div>
-    </span>
-        <div class="date" style="text-align: start;" name="1iu4ibeb7pljbxtv0trpof" format="dd/MM/yyyy"><input id="input-1iu4ibeb7pljbxtv0trpof" min="1" max="31" type="number" name="day" placeholder="JJ" size="2" required="true" sb-form-input> / <input id="input-1iu4ibeb7pljbxtv0trpof" min="1" max="12" type="number" name="month" placeholder="MM"
-                size="2" required="true" sb-form-input> / <input id="input-1iu4ibeb7pljbxtv0trpof" min="1" max="2100" type="number" name="year" placeholder="AAAA" size="4" required="true" sb-form-input>
-        </div>
-        <div id="div-submitInput" align="left">
-            <button id="submitInput" type="submit" value="VALIDER" class="mobile-FW"><span style="margin:0px;">VALIDER</span>
-  </button>
-            <div class="loader" style="display:none"></div>
-        </div>
-        <label id="form-footer-mandatory"></label>
-    </form>
-
-
-    <script type="text/javascript" src="https://forms.sbc33.com/form.js"></script>
 
 </body>
 
